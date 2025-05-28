@@ -1,0 +1,88 @@
+/* Footer.module.css */
+.footer {
+    background-color: #FFFFFF; /* White background */
+    padding: 2.5rem 0;
+    text-align: center;
+    border-top: 1px solid #F9FBC3; /* Cream border */
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--icon-color);
+    color: #FFFFFF;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #FFFFFF;
+  }
+  
+  .social-link:nth-child(1):hover {
+    background-color: #9D8AF3; /* Slightly darker purple */
+  }
+  
+  .social-link:nth-child(2):hover {
+    background-color: #E095F0; /* Slightly darker pink */
+  }
+  
+  .social-link:nth-child(3):hover {
+    background-color: #F5D843; /* Slightly darker yellow */
+  }
+  
+  .social-link:nth-child(4):hover {
+    background-color: #F5F0B0; /* Slightly darker cream */
+  }
+  
+  .copyright {
+    color: #989997; /* Soft gray */
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    font-weight: 400;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .social-links {
+      gap: 1.2rem;
+    }
+    
+    .social-link {
+      width: 42px;
+      height: 42px;
+      font-size: 1.2rem;
+    }
+  }
+  /* Before */
+.component {
+    background: #FFFFFF;
+    color: #333333;
+  }
+  
+  /* After */
+  .component {
+    background: var(--background);
+    color: var(--text-primary);
+  }

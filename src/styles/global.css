@@ -1,0 +1,258 @@
+/* global.css */
+:root {
+    /* Pastel Color Palette */
+    --pastel-cream: #F9FBC3;
+    --pastel-lavender: #B4A2F6;
+    --pastel-pink: #ECAAFB;
+    --pastel-yellow: #FCE54D;
+    --pastel-gray: #989997;
+    --pure-white: #FFFFFF;
+    
+    /* Semantic Color Names */
+    --primary: var(--pastel-lavender);
+    --secondary: var(--pastel-pink);
+    --accent: var(--pastel-yellow);
+    --background: var(--pure-white);
+    --text-primary: #333333;
+    --text-secondary: var(--pastel-gray);
+    --border-color: var(--pastel-cream);
+    
+    /* Typography */
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Poppins', var(--font-main);
+    --font-mono: 'Fira Code', monospace;
+    --text-base: 1rem;
+    --text-scale: 1.25;
+    --text-xs: calc(var(--text-base) / var(--text-scale));
+    --text-sm: calc(var(--text-base) * 0.875);
+    --text-md: var(--text-base);
+    --text-lg: calc(var(--text-base) * var(--text-scale));
+    --text-xl: calc(var(--text-lg) * var(--text-scale));
+    --text-xxl: calc(var(--text-xl) * var(--text-scale));
+    
+    /* Spacing */
+    --space-unit: 1rem;
+    --space-xs: calc(var(--space-unit) / 2);
+    --space-sm: var(--space-unit);
+    --space-md: calc(var(--space-unit) * 1.5);
+    --space-lg: calc(var(--space-unit) * 2);
+    --space-xl: calc(var(--space-unit) * 3);
+    
+    /* Borders */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-full: 9999px;
+    --border-width: 1px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.45s ease;
+  }
+  
+  /* Base Styles */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+  }
+  
+  h1 { font-size: var(--text-xxl); }
+  h2 { font-size: var(--text-xl); }
+  h3 { font-size: var(--text-lg); }
+  h4 { font-size: var(--text-md); }
+  h5 { font-size: var(--text-sm); }
+  h6 { font-size: var(--text-xs); }
+  
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  
+  a:hover {
+    color: var(--secondary);
+  }
+  
+  p {
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Layout Utilities */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+  }
+  
+  .section {
+    padding: var(--space-xl) 0;
+  }
+  
+  .section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: var(--border-radius-full);
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--border-radius-md);
+    font-weight: 500;
+    transition: all var(--transition-normal);
+    border: var(--border-width) solid transparent;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    color: var(--background);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--pastel-lavender);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--primary);
+    color: var(--background);
+  }
+  
+  /* Forms */
+  .input-group {
+    margin-bottom: var(--space-md);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    color: var(--text-primary);
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: var(--space-xs);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    font-family: var(--font-main);
+    transition: border-color var(--transition-fast);
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(180, 162, 246, 0.2);
+  }
+  
+  /* Utility Classes */
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+  .text-left { text-align: left; }
+  
+  .mt-xs { margin-top: var(--space-xs); }
+  .mt-sm { margin-top: var(--space-sm); }
+  .mt-md { margin-top: var(--space-md); }
+  .mt-lg { margin-top: var(--space-lg); }
+  .mt-xl { margin-top: var(--space-xl); }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn var(--transition-slow) forwards;
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #1a1a1a;
+      --text-primary: #f5f5f5;
+      --text-secondary: #cccccc;
+      --border-color: #333333;
+    }
+    
+    body {
+      background-color: var(--background);
+      color: var(--text-primary);
+    }
+    
+    .section-title::after {
+      background: linear-gradient(90deg, var(--secondary), var(--accent));
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    body {
+      background: none;
+      color: #000;
+      font-size: 12pt;
+    }
+    
+    .no-print {
+      display: none !important;
+    }
+  }

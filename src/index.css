@@ -1,0 +1,41 @@
+/* src/index.css */
+:root {
+    /* Light Mode Colors */
+    --color-primary: #B4A2F6;
+    --color-secondary: #ECAAFB;
+    --color-accent: #FCE54D;
+    --color-background: #FFFFFF;
+    --color-text: #333333;
+    --color-text-secondary: #989997;
+    --color-border: #F9FBC3;
+    --color-card: #FFFFFF;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --theme-transition: all 0.3s ease;
+  }
+  
+  .dark {
+    /* Dark Mode Colors */
+    --color-primary: #A78BFA;
+    --color-secondary: #D8B4FE;
+    --color-accent: #FDE047;
+    --color-background: #1a1a1a;
+    --color-text: #f5f5f5;
+    --color-text-secondary: #a1a1aa;
+    --color-border: #2d2d2d;
+    --color-card: #2a2a2a;
+    
+    /* Dark Mode Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: var(--theme-transition);
+  }

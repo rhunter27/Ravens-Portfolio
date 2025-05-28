@@ -1,0 +1,37 @@
+/* src/components/ThemeToggle/ThemeToggle.css */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: var(--theme-transition);
+  }
+  
+  .theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .theme-toggle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sun-icon {
+    color: var(--color-accent);
+  }
+  
+  .moon-icon {
+    color: var(--color-primary);
+  }
+  
+  .theme-toggle-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text);
+  }
